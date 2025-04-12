@@ -1,60 +1,61 @@
-# 🧡 HabitUp - Twój Osobisty Asystent Rozwoju 🧡
+# 🧡 HabitUp - Your Personal Growth Assistant 🧡
 
-## 📖 Opis projektu
+## 📖 Project Description
 
-**HabitUp** to aplikacja wspierająca użytkowników w budowaniu zdrowych nawyków, zarządzaniu codziennymi zadaniami oraz osiąganiu celów. Dzięki integracji z zaawansowanymi modelami AI, aplikacja oferuje spersonalizowane porady, motywację oraz wsparcie w czasie rzeczywistym.
+**HabitUp** is an application designed to help users build healthy habits, manage daily tasks, and achieve their goals. By integrating advanced AI models, the app provides personalized advice, motivation, and real-time support.
 
-Projekt został stworzony z myślą o osobach, które chcą poprawić swoją produktywność, zadbać o zdrowie psychiczne i fizyczne, a także rozwijać się w różnych dziedzinach życia.
-
----
-
-## 🎯 Dla kogo jest HabitUp?
-
-HabitUp jest idealny dla:
-- 🧑‍💼 Profesjonalistów szukających narzędzia do zarządzania czasem.
-- 🧘‍♀️ Osób, które chcą budować zdrowe nawyki.
-- 🏋️‍♂️ Trenerów i coachów wspierających swoich klientów.
-- 🌟 Każdego, kto potrzebuje motywacji i wsparcia w osiąganiu celów.
+The project was created for individuals who want to improve their productivity, take care of their mental and physical health, and grow in various areas of life.
 
 ---
 
-## ✨ Funkcjonalności
+## 🎯 Who is HabitUp for?
 
-- 🧠 **Spersonalizowany asystent AI**: Twój osobisty coach wspierający w budowaniu nawyków.
-- ✅ **Zarządzanie zadaniami**: Twórz listy zadań i śledź postępy.
-- 🔔 **Motywacyjne powiadomienia**: Otrzymuj przypomnienia i inspirujące wiadomości.
-- 🔒 **Bezpieczeństwo danych**: Twoje dane są chronione dzięki zaawansowanym mechanizmom bezpieczeństwa.
-- 🤖 **Integracja z OpenAI**: Wykorzystanie najnowszych technologii AI do personalizacji doświadczenia użytkownika.
+HabitUp is perfect for:
+- 🧑‍💼 Professionals looking for a time management tool.
+- 🧘‍♀️ Individuals who want to build healthy habits.
+- 🏋️‍♂️ Trainers and coaches supporting their clients.
+- 🌟 Anyone who needs motivation and support in achieving their goals.
 
 ---
 
-## 🛠️ Technologie
+## ✨ Features
 
-Projekt został zbudowany przy użyciu następujących technologii:
+- 🧠 **Personalized AI Assistant**: Your personal coach to help you build habits.
+- ✅ **Task Management**: Create to-do lists and track your progress.
+- 🔔 **Motivational Notifications**: Receive reminders and inspiring messages.
+- 🔒 **Data Security**: Your data is protected with advanced security mechanisms.
+- 🤖 **OpenAI Integration**: Leverages the latest AI technologies to personalize the user experience.
+
+---
+
+## 🛠️ Technologies
+
+The project is built using the following technologies:
 - **Backend**: Java (Spring Boot)
 - **Frontend**: HTML, CSS, JavaScript
-- **Baza danych**: MySQL
+- **Database**: MySQL
 - **AI**: OpenAI API
-- **Bezpieczeństwo**: Spring Security
+- **Security**: Spring Security
 
 ---
 
-## 📸 Zrzuty ekranu
+## 📸 Screenshots
 
-1. **Strona główna**  
-   ![Strona główna](src/main/resources/static/assets/indexPage.png)
+1. **Home Page**  
+   ![Home Page](src/main/resources/static/assets/indexPage.png)
 
-2. **Analiza Trendów**  
-   ![Panel użytkownika](src/main/resources/static/assets/main2.png)
+2. **Trend Analysis**  
+   ![User Panel](src/main/resources/static/assets/main2.png)
 
-3. **Przykład rozmowy z AI**  
-   ![Rozmowa z AI](src/main/resources/static/assets/main1.png)
+3. **AI Conversation Example**  
+   ![AI Conversation](src/main/resources/static/assets/main1.png)
 
 ---
 
-## 🚀 Jak uruchomić projekt?
+## 🚀 How to Run the Project?
 
-1. **Klonowanie repozytorium**  
+1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/twoj-uzytkownik/HabitUp.git
+   git clone https://github.com/your-username/HabitUp.git
    cd HabitUp
+   ```
