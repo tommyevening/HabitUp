@@ -1,0 +1,19 @@
+# Ignoruj pliki tymczasowe
+*.tmp
+*.bak
+*.swp
+
+# Ignoruj pliki generowane przez narzędzia JS
+*.min.js
+*.bundle.js
+*.bundle.js.map
+*.js.map
+
+# Ignoruj pliki NodeJS
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignoruj coverage
+coverage/
+.nyc_output/ 

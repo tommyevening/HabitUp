@@ -1,0 +1,11 @@
+You will need to add the following images to the 'images' folder:
+
+1. profile-placeholder.jpg - Your professional photo for the hero section
+   - Recommended size: 600x600px or similar square ratio
+   - Should be a high-quality professional photo with good lighting
+
+2. project-placeholder.jpg - Project screenshots for the portfolio section
+   - Recommended size: 700x400px (16:9 ratio)
+   - Create separate images for each project or duplicate this for demo purposes
+
+You can simply rename your actual images to these filenames or update the CSS/HTML to point to your custom image filenames. 

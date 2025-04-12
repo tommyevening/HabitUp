@@ -1,0 +1,26 @@
+{
+  "name": "Self Development",
+  "avatar": "fas fa-book",
+  "messages": [
+    {
+      "type": "incoming",
+      "content": "Welcome! I'm your Self Development coach. I'm here to help you grow personally and professionally. What would you like to work on today?"
+    },
+    {
+      "type": "outgoing",
+      "content": "I want to improve my time management skills. I often feel like I don't have enough time in the day."
+    },
+    {
+      "type": "incoming",
+      "content": "Time management is a common challenge. Let's start with understanding how you currently spend your time. For the next 3 days, could you track your activities hourly? This will help us identify where your time is actually going."
+    },
+    {
+      "type": "outgoing",
+      "content": "That makes sense. I'll try tracking my time. Do you have any recommendations for methods or apps I could use?"
+    },
+    {
+      "type": "incoming",
+      "content": "Great initiative! For simple tracking, you can use the Pomodoro technique with apps like Forest or Toggl. Or try time-blocking in your calendar app. The key is to categorize activities: deep work, shallow work, meetings, breaks, and personal time. This will reveal patterns and help us optimize your schedule."
+    }
+  ]
+} 

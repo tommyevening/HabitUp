@@ -1,0 +1,15 @@
+# Ignoruj pliki tymczasowe
+*.tmp
+*.bak
+*.swp
+
+# Ignoruj pliki generowane przez narzędzia CSS
+*.css.map
+*.min.css
+
+# Ignoruj cache narzędzi
+.sass-cache/
+.less-cache/
+
+# Ignoruj pliki NodeJS
+node_modules/ 

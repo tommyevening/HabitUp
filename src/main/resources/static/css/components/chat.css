@@ -1,0 +1,118 @@
+/* HabbitUp - Chat Component */
+
+.chat-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: auto;
+    background-color: var(--dark-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+}
+
+.chat-header {
+    background-color: var(--dark-surface-2);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.chat-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.chat-title {
+    font-weight: 600;
+}
+
+.chat-body {
+    padding: 1rem;
+    height: calc(100% - 60px - 60px); /* Adjust for header and input */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%; /* Ensure the chat body fills the full width */
+}
+
+.chat-message {
+    width: 100%; /* Change from max-width: 80% to width: 100% */
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+    animation: fadeIn 0.5s;
+}
+
+.chat-message.incoming {
+    align-self: flex-start;
+    background-color: var(--dark-surface-2);
+    max-width: 80%; /* Keep max-width for incoming messages */
+}
+
+.chat-message.outgoing {
+    align-self: flex-end;
+    background-color: var(--primary);
+    color: white;
+    max-width: 80%; /* Keep max-width for outgoing messages */
+}
+
+.chat-input {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+    background-color: var(--dark-surface-2);
+    border-top: 1px solid var(--border);
+}
+
+.chat-input input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: var(--radius);
+    background-color: var(--dark-surface);
+    color: var(--text-primary);
+    outline: none;
+}
+
+.chat-input button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.chat-input button:hover {
+    background-color: var(--primary-dark);
+}
+
+.typing-indicator {
+    align-self: flex-start;
+    background-color: var(--dark-surface-2);
+    padding: 1rem;
+    border-radius: var(--radius);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chat-container {
+        max-width: 90%;
+    }
+} 

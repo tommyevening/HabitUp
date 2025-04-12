@@ -1,0 +1,395 @@
+/**
+ * HabbitUp - Modal Component Styles
+ * 
+ * This file contains styles for modal components in the HabbitUp application.
+ * It's organized by component and functionality.
+ */
+
+/* -----------------------------
+   Base Modal Styles
+----------------------------- */
+.modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 0 !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+.modal.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.modal .modal-content {
+    background-color: var(--dark-surface);
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 650px;
+    position: relative !important;
+    padding: 2rem;
+    transform: none !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    margin: auto !important;
+}
+
+.modal.active .modal-content {
+    transform: none !important;
+}
+
+/* New stronger centering for auth modal container */
+#authModal.modal .auth-modal-container {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    display: block !important;
+    animation: centerModal 0.3s ease-out forwards;
+}
+
+#authModal.modal .auth-modal {
+    margin: 0 !important;
+    position: relative !important;
+    max-width: 450px !important;
+    transform: none !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Modal Header & Footer */
+.modal-close,
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover,
+.close-modal:hover {
+    color: var(--primary);
+}
+
+.modal-header h3 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-body {
+    margin-bottom: 1.5rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Modal Sizes */
+.modal-sm .modal-content {
+    max-width: 350px;
+}
+
+.modal-lg .modal-content {
+    max-width: 650px;
+}
+
+.modal-xl .modal-content {
+    max-width: 850px;
+}
+
+/* Accessibility Focus States */
+.modal .close-modal:focus,
+.modal .btn:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* -----------------------------
+   Modal Animations
+----------------------------- */
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes centerModal {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes pulseHighlight {
+    0% {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 2px 8px rgba(var(--primary-rgb), 0.25);
+    }
+    100% {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* -----------------------------
+   Conversation Modal Specific Styles
+----------------------------- */
+.modal#newConversationModal .modal-content {
+    max-width: 750px;
+}
+
+.modal#newConversationModal .trainer-selector {
+    width: 100%;
+}
+
+/* Trainer Tabs */
+.modal#newConversationModal .trainer-tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 1rem;
+}
+
+.modal#newConversationModal .trainer-tab {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    cursor: pointer;
+    background-color: var(--input-bg);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeSlideUp 0.3s ease forwards;
+    opacity: 0;
+}
+
+.modal#newConversationModal .trainer-tab i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.modal#newConversationModal .trainer-tab span {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.modal#newConversationModal .trainer-tab .trainer-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+/* Staggered Animation Timing */
+.modal .trainer-tab:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.modal .trainer-tab:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.modal .trainer-tab:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Trainer Tab Hover & Selected States */
+.modal#newConversationModal .trainer-tab::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top right, rgba(var(--primary-rgb), 0.15), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.modal#newConversationModal .trainer-tab:hover::after,
+.modal#newConversationModal .trainer-tab.selected::after {
+    opacity: 1;
+}
+
+.modal#newConversationModal .trainer-tab.selected {
+    border-color: var(--primary);
+    box-shadow: 0 4px 12px rgba(var(--primary-rgb), 0.2);
+}
+
+.modal#newConversationModal .trainer-tab.selected::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--primary);
+    font-size: 1.2rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+
+.modal#newConversationModal .trainer-tab.selected::before {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* -----------------------------
+   Coach Name Input Styles
+----------------------------- */
+.name-input-container {
+    margin-bottom: 28px;
+    animation: fadeSlideUp 0.4s ease-out forwards;
+    animation-delay: 0.1s;
+    width: 100%;
+    position: relative;
+}
+
+.name-input-container::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(var(--primary-rgb), 0.5), transparent);
+}
+
+.name-input-container label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    letter-spacing: 0.02em;
+    position: relative;
+}
+
+.name-input-container label::before {
+    content: '*';
+    color: var(--primary);
+    position: relative;
+    margin-right: 4px;
+}
+
+.name-input-container input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background-color: rgba(var(--primary-rgb), 0.05);
+    transition: all 0.2s ease;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.name-input-container input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+    outline: none;
+    transform: translateY(-2px);
+    background-color: rgba(var(--primary-rgb), 0.08);
+}
+
+.name-input-container input::placeholder {
+    color: var(--text-secondary);
+    opacity: 0.7;
+}
+
+.modal.active .name-input-container input {
+    animation: pulseHighlight 2s ease-in-out 1;
+}
+
+/* -----------------------------
+   Responsive Adjustments
+----------------------------- */
+@media (max-width: 768px) {
+    .modal#newConversationModal .trainer-tabs {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .modal#newConversationModal .trainer-tab {
+        padding: 1.25rem;
+    }
+    
+    .modal#newConversationModal .trainer-tab i {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .modal#newConversationModal .modal-content {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    .modal-footer button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal {
+        padding: 12px;
+    }
+    
+    .name-input-container label {
+        font-size: 1rem;
+    }
+    
+    .name-input-container input {
+        font-size: 1rem;
+        padding: 12px 14px;
+    }
+} 

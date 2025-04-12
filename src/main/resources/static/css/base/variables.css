@@ -1,0 +1,50 @@
+/* HabbitUp - CSS Variables */
+
+:root {
+    /* Colors */
+    --primary: #7c5fff;
+    --primary-light: #9d85ff;
+    --primary-dark: #6345cc;
+    --primary-rgb: 124, 95, 255;
+    
+    --secondary: #41d9aa;
+    --secondary-light: #62e1ba;
+    --secondary-dark: #35b08a;
+    
+    --dark-bg: #121212;
+    --dark-surface: #1e1e1e;
+    --dark-elevated: #2a2a2a;
+    
+    --border-color: rgba(255, 255, 255, 0.1);
+    --border: rgba(255, 255, 255, 0.1);
+    
+    --text-color: rgba(255, 255, 255, 0.95);
+    --text-primary: rgba(255, 255, 255, 0.95);
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-tertiary: rgba(255, 255, 255, 0.5);
+    
+    --success: #00c853;
+    --warning: #ffab00;
+    --danger: #f44336;
+    --info: #2196f3;
+    
+    /* Inputs */
+    --input-bg: rgba(255, 255, 255, 0.05);
+    
+    /* Sizes and Spacing */
+    --radius: 0.5rem;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    
+    /* Transitions */
+    --transition: all 0.2s ease;
+    
+    /* Layout */
+    --container-width: 1200px;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+} 

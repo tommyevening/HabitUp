@@ -1,0 +1,129 @@
+/* HabbitUp - Modals */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background-color: var(--dark-surface);
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    padding: 2rem;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.modal-overlay.active .modal {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    color: var(--primary);
+}
+
+.modal-title {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.modal-body {
+    margin-bottom: 1.5rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+/* Modal sizes */
+.modal-sm {
+    max-width: 350px;
+}
+
+.modal-lg {
+    max-width: 650px;
+}
+
+.modal-xl {
+    max-width: 850px;
+}
+
+/* Modal animation variants */
+.modal-slide-up .modal {
+    transform: translateY(50px);
+}
+
+.modal-slide-up.active .modal {
+    transform: translateY(0);
+}
+
+.modal-fade-in .modal {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.modal-fade-in.active .modal {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Auth modal specific styles */
+.auth-modal {
+    max-width: 430px;
+    padding: 2rem;
+}
+
+.auth-modal .auth-header {
+    margin-bottom: 1.25rem;
+}
+
+.auth-modal .logo {
+    margin-bottom: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .modal {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+    
+    .auth-modal {
+        padding: 1.5rem;
+    }
+} 

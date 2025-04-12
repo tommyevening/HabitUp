@@ -1,0 +1,156 @@
+/**
+ * Utility to hide content visually but keep it accessible to screen readers
+ */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/**
+ * Page identification styles
+ * Helps users clearly identify which page they're viewing
+ */
+.page-identifier {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    transition: all 0.3s ease;
+    opacity: 1;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    background-color: var(--primary);
+}
+
+.page-identifier-content {
+    padding: 8px 16px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-identifier i {
+    font-size: 1rem;
+}
+
+/* Specific page identifiers with unique colors */
+body[data-page-id="chat-dashboard"] .page-identifier {
+    background-color: var(--primary);
+}
+
+body[data-page-id="settings"] .page-identifier {
+    background-color: #5a6cdf;
+}
+
+body[data-page-id="profile"] .page-identifier {
+    background-color: #38b2ac;
+}
+
+body[data-page-id="analytics"] .page-identifier {
+    background-color: #dd6b20;
+}
+
+/* Make identifier less intrusive after scrolling */
+.page-identifier.minimized {
+    opacity: 0.7;
+    transform: translateX(-50%) translateY(-70%);
+}
+
+.page-identifier:hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Hide for print */
+@media print {
+    .page-identifier {
+        display: none;
+    }
+}
+
+/* Page information toast notifications */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: var(--dark-surface);
+    border-left: 4px solid var(--primary);
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 380px;
+    z-index: 10000;
+    transform: translateX(120%);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.toast.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.toast-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.toast-content {
+    flex-grow: 1;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: var(--text-color);
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 2px;
+    transition: color 0.2s ease;
+}
+
+.toast-close:hover {
+    color: var(--text-color);
+}
+
+/* Specific toast types */
+.page-info-toast {
+    border-left-color: var(--primary);
+}
+
+.page-info-toast .toast-icon {
+    color: var(--primary);
+}
+
+/* Responsive toast */
+@media (max-width: 576px) {
+    .toast {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        max-width: none;
+    }
+} 

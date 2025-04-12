@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabbitUp - Personalized Habit Analytics</title>
+    <link rel="stylesheet" href="css/habbitup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    
+    <!-- Auth specific CSS -->
+    <link rel="stylesheet" href="css/components/modals.css">
+    <link rel="stylesheet" href="css/components/social-login.css">
+    <link rel="stylesheet" href="css/pages/auth.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="../images/logo.svg" alt="HabbitUp Logo">
+                    <span>HabbitUp</span>
+                </div>
+                <div class="nav-auth">
+                    <button id="login-btn" class="btn btn-secondary">Log In</button>
+                    <button id="register-btn" class="btn btn-primary">Sign Up</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Unlock Your <span>Full Potential</span> With AI-Powered Habit Analytics</h1>
+                    <p>HabbitUp analyzes your daily patterns and provides personalized insights to help you build better habits, make thoughtful decisions, and achieve your goals.</p>
+                    <div class="cta-group">
+                        <button id="hero-register-btn" class="btn btn-primary">Get Started</button>
+                        <button id="hero-learn-btn" class="btn btn-secondary">Learn More</button>
+                    </div>
+                </div>
+                <div class="hero-illustration">
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <div class="chat-avatar">H</div>
+                            <div class="chat-title">HabbitUp Assistant</div>
+                        </div>
+                        <div class="chat-body">
+                            <!-- Chat messages will be added dynamically by JavaScript -->
+                        </div>
+                        <form class="chat-input">
+                            <input type="text" placeholder="Type your message...">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Your Personal Growth Ally</h2>
+                    <p>HabbitUp combines behavioral science with AI to provide a personalized experience</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data-Driven Insights</h3>
+                        <p>Advanced analytics identify patterns in your behavior and suggest optimal changes for growth.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Personalized Approach</h3>
+                        <p>No templates or one-size-fits-all solutions. Every recommendation is uniquely tailored to you.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI Conversation</h3>
+                        <p>Interact naturally with our AI assistant for guidance, accountability, and motivation.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Privacy First</h3>
+                        <p>Your data belongs to you. We never sell your information and only use it to improve your experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Strategic Planning</h3>
+                        <p>Create personalized action plans, optimize your schedule, and automate repetitive tasks.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3>Celebrate Progress</h3>
+                        <p>Track your achievements and celebrate small victories on your path to personal growth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add auth modal templates at the end of the body but before scripts -->
+    <div class="modal-overlay" id="authModal">
+        <div class="modal auth-modal">
+            <button class="modal-close" id="closeAuthModal">×</button>
+            
+            <div id="loginPanel">
+                <div class="auth-header">
+                    <h1>Welcome Back</h1>
+                    <p>Sign in to your account to continue</p>
+                </div>
+                
+                <div class="social-login">
+                    <button class="btn-social btn-google">
+                        <img src="../images/google-icon.svg" alt="Google">
+                        Google
+                    </button>
+                    <button class="btn-social btn-facebook">
+                        <img src="../images/facebook-icon.svg" alt="Facebook">
+                        Facebook
+                    </button>
+                </div>
+                
+                <div class="social-login-divider">
+                    <span>or sign in with email</span>
+                </div>
+                
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" class="form-input" placeholder="Enter your password">
+                    </div>
+                    
+                    <div class="form-check">
+                        <input type="checkbox" id="remember" class="form-check-input">
+                        <label for="remember" class="form-check-label">Remember me</label>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Sign In</button>
+                </form>
+                
+                <div class="auth-links">
+                    <p>Forgot your password? <a href="#" id="forgotPassword">Reset it</a></p>
+                    <p>Don't have an account? <a href="#" id="showRegister">Sign up</a></p>
+                </div>
+            </div>
+            
+            <div id="registerPanel" style="display: none;">
+                <div class="auth-header">
+                    <h1>Create Account</h1>
+                    <p>Join HabbitUp to start building better habits</p>
+                </div>
+                
+                <div class="social-login">
+                    <button class="btn-social btn-google">
+                        <img src="../images/google-icon.svg" alt="Google">
+                        Google
+                    </button>
+                    <button class="btn-social btn-facebook">
+                        <img src="../images/facebook-icon.svg" alt="Facebook">
+                        Facebook
+                    </button>
+                </div>
+                
+                <div class="social-login-divider">
+                    <span>or register with email</span>
+                </div>
+                
+                <form class="auth-form">
+                    <div class="form-group-inline">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" id="firstName" class="form-input" placeholder="First name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" id="lastName" class="form-input" placeholder="Last name">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regEmail" class="form-label">Email</label>
+                        <input type="email" id="regEmail" class="form-input" placeholder="Enter your email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regPassword" class="form-label">Password</label>
+                        <input type="password" id="regPassword" class="form-input" placeholder="Choose a password">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" id="confirmPassword" class="form-input" placeholder="Confirm your password">
+                    </div>
+                    
+                    <div class="form-check">
+                        <input type="checkbox" id="terms" class="form-check-input">
+                        <label for="terms" class="form-check-label">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Create Account</button>
+                </form>
+                
+                <div class="auth-links">
+                    <p>Already have an account? <a href="#" id="showLogin">Sign in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load all CSS files required for auth modals -->
+    <link rel="stylesheet" href="css/components/modals.css">
+    <link rel="stylesheet" href="css/components/social-login.css">
+    <link rel="stylesheet" href="css/pages/auth.css">
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <span>HabbitUp</span>
+                    </div>
+                    <p>We help people reach their full potential through personalized habit analytics and intelligent life decision support.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-links-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Features</h3>
+                        <ul>
+                            <li><a href="#">Habit Tracking</a></li>
+                            <li><a href="#">AI Assistant</a></li>
+                            <li><a href="#">Personalized Analytics</a></li>
+                            <li><a href="#">Goal Setting</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-column">
+                        <h3>Resources</h3>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guides</a></li>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 HabbitUp. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/habbitup.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html> 

@@ -1,0 +1,98 @@
+/* HabbitUp - Social Login */
+
+.social-login {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-login .btn-social {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+}
+
+.social-login-divider {
+    position: relative;
+    text-align: center;
+    margin: 1.25rem 0;
+}
+
+.social-login-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border);
+    z-index: 0;
+}
+
+.social-login-divider span {
+    position: relative;
+    background-color: var(--dark-surface);
+    padding: 0 1rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+    background-color: transparent;
+    color: var(--text-primary);
+}
+
+.btn-social img,
+.btn-social svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-social:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.btn-google {
+    background-color: white;
+    color: #333;
+}
+
+.btn-google:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-facebook {
+    background-color: #1877F2;
+    color: white;
+    border-color: #1877F2;
+}
+
+.btn-facebook:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .social-login {
+        gap: 0.5rem;
+    }
+    
+    .btn-social {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.5rem;
+    }
+} 
