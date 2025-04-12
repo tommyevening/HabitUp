@@ -1,6 +1,14 @@
 # 🌟 HabitUp - Twój Osobisty Asystent Rozwoju 🌟
 
-![HabitUp Logo](../images/logo.svg) 
+![HabitUp Logo]<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <!-- Prostokąt z ikoną -->
+  <rect x="0" y="0" width="50" height="50" fill="#1A1A1A" />
+  <rect x="10" y="10" width="30" height="30" fill="none" stroke="#FF774C" stroke-width="2" />
+  <text x="25" y="30" fill="#FF774C" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" dominant-baseline="middle">H</text>
+
+  <!-- Tekst "HabbitUp" -->
+  <text x="60" y="35" fill="#FF774C" font-family="Arial, sans-serif" font-size="24" font-weight="bold">HabbitUp</text>
+</svg>) 
 
 ## 📖 Opis projektu
 
