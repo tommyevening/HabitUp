@@ -1,6 +1,6 @@
 # 🌟 HabitUp - Twój Osobisty Asystent Rozwoju 🌟
 
-![HabitUp Logo](https://placehold.co/600x200?text=HabitUp+Logo) <!-- Możesz podmienić na logo projektu -->
+![HabitUp Logo](../images/logo.svg) 
 
 ## 📖 Opis projektu
 
