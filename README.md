@@ -1,4 +1,4 @@
-# 🧡 HabitUp - Your Personal Growth Assistant 🧡
+#  HabitUp - Your Personal Growth Assistant 
 
 ## 📖 Project Description
 
